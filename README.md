@@ -45,6 +45,8 @@ The optimal solution is found by comparing each set of unique solutions, for exa
 
 If I have 3 unique paths, I find the best solution using one path, then the best solution using 2 path and the best solution using 3 paths.
 By considering the number of ants I then decide which set is the fastest, and  write of the exit the movements that the ants have to do each turn.  
+You can check in the folder maps the example1 file to understand better how the algorithm choses the paths.  
+All functions are commented.
 
 usage:
 ```
