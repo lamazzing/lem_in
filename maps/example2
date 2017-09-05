@@ -1,0 +1,11 @@
+# comment 
+10
+a 0 0
+b 0 0
+##start
+start 0 0
+##end
+end 0 0
+start-a
+a-b
+b-end
