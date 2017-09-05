@@ -23,6 +23,9 @@ static void	ft_set(t_ants *a)
 	a->rooms = 0;
 }
 
+/*
+** Parsing commands, in this case start-end
+*/
 int			ft_comment(t_ants *a)
 {
 	if (a->line[0] == '#' && a->line[1] != '#')
@@ -38,6 +41,9 @@ int			ft_comment(t_ants *a)
 	return (0);
 }
 
+/*
+** Parsing number of ants
+*/
 static int	ft_num(t_ants *a)
 {
 	size_t	i;
@@ -64,6 +70,14 @@ static int	ft_num(t_ants *a)
 		a->end = -1;
 	return (1);
 }
+
+/*
+** Parsing the file by steps to avoid doing unecessary calculations
+** and stop as soon as there's an error.
+** ft_algo: algorithm for set of best paths
+** ft_printants: prints anthill map
+** ft_bestpath: chooses best path depending on the number of ants and prints the turns
+*/
 
 int			main(void)
 {

@@ -11,7 +11,9 @@
 /* ************************************************************************** */
 
 #include "lem_in.h"
-
+/*
+** creation of tab to save the different paths solutions
+*/
 char	***ft_createtab(t_ants *a, int po)
 {
 	char	***dup;

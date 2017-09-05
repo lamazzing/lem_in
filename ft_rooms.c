@@ -12,6 +12,9 @@
 
 #include "lem_in.h"
 
+/*
+** Checking room names
+*/
 static int	ft_rightroom(t_ants *a, t_room *r, char **dup)
 {
 	size_t i;
@@ -35,6 +38,9 @@ static int	ft_rightroom(t_ants *a, t_room *r, char **dup)
 	return (1);
 }
 
+/*
+** Parsing rooms, code 2 stands for start, 3 for end
+*/
 int			ft_rooms(t_ants *a, t_room *r)
 {
 	char	**dup;
@@ -79,7 +85,9 @@ static int	ft_checkt(char *line)
 	else
 		return (1);
 }
-
+/*
+** Parsing links
+*/
 int			ft_links(t_ants *a, t_room *r)
 {
 	int		i;

@@ -12,6 +12,9 @@
 
 #include "lem_in.h"
 
+/*
+** reprint the links in order
+*/
 static int	ft_printlinks(t_ants *a, t_room *r)
 {
 	int u;
@@ -37,7 +40,9 @@ static int	ft_printlinks(t_ants *a, t_room *r)
 	}
 	return (0);
 }
-
+/*
+** reprint the map of the anthill
+*/
 int			ft_printants(t_ants *a, t_room *r)
 {
 	int i;

@@ -12,6 +12,10 @@
 
 #include "lem_in.h"
 
+/*
+** Switching links
+*/
+
 static int	ft_switch(t_room *r, int l, int i)
 {
 	char *tmp;
@@ -25,6 +29,10 @@ static int	ft_switch(t_room *r, int l, int i)
 	r[i].lin[l] = tmps;
 	return (1);
 }
+
+/*
+** Links are reordered from shortest paths to longest
+*/
 
 static void	ft_orderlink(t_ants *a, t_room *r, int i, int l)
 {
@@ -53,6 +61,11 @@ static void	ft_orderlink(t_ants *a, t_room *r, int i, int l)
 	}
 }
 
+/*
+** Recursive function to determine minimum distance for each room by going to each link
+** Only the minimum distance r[n].dis from start is recorded for each room
+*/
+
 static int	ft_back(t_ants *a, t_room *r, int i, int l)
 {
 	int n;
@@ -73,6 +86,11 @@ static int	ft_back(t_ants *a, t_room *r, int i, int l)
 	return (1);
 }
 
+/*
+** Find start and end room and maximum number of unique paths (a->maxp)
+** 2 stands for start, 3 stands for end
+** i is equal to 1 if I check only for start, to 2 if I check for end, 3 if I check both
+*/
 static int	ft_checkensta(t_room *r, t_ants *a, int i, int f)
 {
 	if (i == 1 || i == 3)
@@ -97,7 +115,12 @@ static int	ft_checkensta(t_room *r, t_ants *a, int i, int f)
 	}
 	return (f);
 }
-
+/*
+** Structure of the algorithm
+** ft_back defines minimum distance for each room
+** ft_orderlink reorders links between rooms
+** ft_pathfinder finds fastest path
+*/
 int			ft_algo(t_ants *a, t_room *r, t_path *p)
 {
 	int i;

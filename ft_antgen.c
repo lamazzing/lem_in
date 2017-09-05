@@ -62,7 +62,14 @@ static int	ft_antforward(t_room *r, t_path *p, int e, int numa)
 	}
 	return (1);
 }
-
+/*
+** function to print in order the ants movement each turn
+** it just iterates for the solution chosen and moves the ants forward till the end
+** I also check in case of multiple paths solutions (for example 2), 
+** when the number of ants is low, if it's better to send them in less different paths
+**(for example if I have only two ants left it could be better to send them one after the other in the same path,
+** instead of sending one of them in a different but longer path)
+*/
 int			ft_antgen(t_ants *a, t_room *r, t_path *p, int e)
 {
 	int i;
