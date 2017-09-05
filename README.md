@@ -8,7 +8,7 @@ knowing that an ant can only move once per turn and that at any given time there
 
 The map must be in the following format:
 
-# comment   -> comment
+#comment   -> comment
 10          -> number of ants
 a 0 0       -> definition of a room, room name (the names can be assigned randomly) followed by the coordinates
 b 0 0
