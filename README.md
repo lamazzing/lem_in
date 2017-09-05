@@ -8,14 +8,14 @@ knowing that an ant can only move once per turn and that at any given time there
 
 The map must be in the following format:
 
-#comment   -> comment
-10          -> number of ants
-a 0 0       -> definition of a room, room name (the names can be assigned randomly) followed by the coordinates
-b 0 0
-##start     -> the next room defined will be the source
-start 0 0
-##end       -> the next room defined will be the end
-end 0 0
+#comment   -> comment  
+10          -> number of ants  
+a 0 0       -> definition of a room, room name (the names can be assigned randomly) followed by the coordinates  
+b 0 0  
+##start     -> the next room defined will be the source  
+start 0 0  
+##end       -> the next room defined will be the end  
+end 0 0  
 start-a     -> definition of a link between rooms
 a-b
 b-end
