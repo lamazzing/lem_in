@@ -16,35 +16,35 @@ b 0 0
 start 0 0  
 ##end       -> the next room defined will be the end  
 end 0 0  
-start-a     -> definition of a link between rooms
-a-b
-b-end
-(I ignore the coordinates of the rooms that can be used in conjunction with a visual program)
+start-a     -> definition of a link between rooms  
+a-b  
+b-end  
+(I ignore the coordinates of the rooms that can be used in conjunction with a visual program)  
 
-The output is:
-L1-a
-L1-b L2-a
-L1-end L2-b L3-a
-L2-end L3-b L4-a
-L3-end L4-b L5-a
-L4-end L5-b L6-a
-L5-end L6-b L7-a
-L6-end L7-b L8-a
-L7-end L8-b L9-a
-L8-end L9-b L10-a
-L9-end L10-b
-L10-end
+The output is:  
+L1-a  
+L1-b L2-a  
+L1-end L2-b L3-a  
+L2-end L3-b L4-a  
+L3-end L4-b L5-a  
+L4-end L5-b L6-a  
+L5-end L6-b L7-a  
+L6-end L7-b L8-a  
+L7-end L8-b L9-a  
+L8-end L9-b L10-a  
+L9-end L10-b  
+L10-end  
 
 In the format "Ln-name", Ln is the number of the ant that is moving and name is the room name to which the ant goes.
-Each line corresponds to one turn.
+Each line corresponds to one turn.  
 
 In order to find the best solution I first determine the distance of each room from the end.
 I then re-order the links for each room by putting first the links that lead to shortest paths.
 I get the minimum between the # of links in the starting room and the # of links in the finishing room to know what is the max number of unique paths.
-The optimal solution is found by comparing each set of unique solutions, for example:
+The optimal solution is found by comparing each set of unique solutions, for example:  
 
 If I have 3 unique paths, I find the best solution using one path, then the best solution using 2 path and the best solution using 3 paths.
-By considering the number of ants I then decide which set is the fastest, and  write of the exit the movements that the ants have to do each turn.
+By considering the number of ants I then decide which set is the fastest, and  write of the exit the movements that the ants have to do each turn.  
 
 usage:
 ```
